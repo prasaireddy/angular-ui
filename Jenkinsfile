@@ -6,7 +6,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Build'
-                sh 'apt install nodejs=18.16.1'
+                sh 'apt install nodejs=18.16.1 -y'
                 sh 'npm install'
                 sh 'npm install --save-dev @angular-devkit/build-angular'
                 sh 'npm run build'
