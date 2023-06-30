@@ -6,7 +6,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Build'
-                sh 'node --version'
+                sh 'nvm install 18.16.1'
                 sh 'npm install'
                 sh 'npm install --save-dev @angular-devkit/build-angular'
                 sh 'npm run build'
