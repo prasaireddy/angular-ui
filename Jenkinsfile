@@ -6,6 +6,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Build'
+                sh 'npm install -g npm@latest'
                 sh 'npm install --save-dev @angular-devkit/build-angular'
                 sh 'npm run build'
             }
